@@ -16,10 +16,10 @@ class DealerSpec: QuickSpec {
     override func spec() {
         describe("Dealer") {
             
-            var dealer = Dealer()
+            var dealer = Dealer(name: "bob")
             
             beforeEach({ () -> () in
-                dealer = Dealer()
+                dealer = Dealer(name: "bob")
             })
             
             describe("place(bet:)") {
@@ -115,7 +115,6 @@ class DealerSpec: QuickSpec {
                     dealer.house.cards.append(tenOfDiamonds)
                     dealer.house.cards.append(twoOfClubs)
                     dealer.turn(house: dealer.house)
-                    
                     expect(dealer.house.busted).to(beTrue())
                     expect(dealer.house.cards.count).to(equal(3))
                 }

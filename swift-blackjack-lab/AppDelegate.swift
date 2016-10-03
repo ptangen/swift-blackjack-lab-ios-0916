@@ -12,30 +12,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
-    /**
-     
-     * Declare any custom properties here.
-     
-     */
+        
+    // needed by player to set stayed property
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        /*
-         
-         * Call your custom classes here when running the scheme.
-         
-         */
+        let game = Blackjack.playBlackjack(withBet: 10)
+        print(game)
         
         // Do not alter
         return true  //
     }   ///////////////
+
+    // Write a method called playBlackjack(withBet:) that calls the different steps in the game in order. The player and house should be offered a maximum of five cards total.
     
-    /*
-     
-     * Write your playBlackjack method in here
-     
-     */
+
     
 }
 
